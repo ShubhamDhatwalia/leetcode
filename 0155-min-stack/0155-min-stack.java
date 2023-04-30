@@ -44,6 +44,9 @@
 
 
 
+//  Approach 2:::   TC: O(1)  SC: O(2N)
+
+
 class MinStack {
     
     class Pair{
@@ -86,6 +89,69 @@ class MinStack {
     }
 }
 
+
+
+//  Approach 3::   TC: O(1)  SC:O(N)
+
+
+// class MinStack {
+
+//     Stack<Integer> st = new Stack<>();
+//     int minVal = Integer.MAX_VALUE;
+    
+//     public MinStack() {
+        
+//     }
+    
+//     public void push(int val) {
+//         if(st.size() == 0){
+//             st.push(val);
+//             minVal = val;
+//         }else{
+//             if(val < minVal){
+//                 int v = 2*val - minVal;
+//                 st.push(v);
+//                 minVal = val;
+//             }else{
+//                 st.push(val);
+//             }
+//         }
+//     }
+    
+//     public void pop() {
+//        if(st.isEmpty()){
+//            return;
+//        }
+//        if(st.peek() < minVal){
+//            int ans = minVal;
+//            int prevMin = 2*minVal-st.pop();
+//            minVal = prevMin;
+//            ans = ans;
+//        }else{
+//            st.pop();
+//        }
+//     }
+    
+//     public int top() {
+//         if(st.isEmpty()){
+//             return -1;
+//         }
+//         if(st.peek() < minVal){
+//             return minVal;
+//         }else{
+//             return st.peek();
+//         }
+//     }
+    
+//     public int getMin() {
+//          if(st.isEmpty()){
+//             return -1;
+//         }
+//         return minVal;
+//     }
+// }
+
+
 /**
  * Your MinStack object will be instantiated and called as such:
  * MinStack obj = new MinStack();
@@ -94,3 +160,4 @@ class MinStack {
  * int param_3 = obj.top();
  * int param_4 = obj.getMin();
  */
+
