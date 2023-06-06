@@ -71,7 +71,12 @@ class MyStack
         // Your code here
         if(top == -1){
             return -1;
+        }else{
+            int value = arr[top];
+            arr[top] =0;
+            top--;
+            return value;
         }
-        return arr[top--];
+        
 	}
 }
