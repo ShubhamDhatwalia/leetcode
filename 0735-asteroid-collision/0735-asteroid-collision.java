@@ -20,12 +20,11 @@ class Solution {
                     st.push(asteroid);
                 }
         }
-       
     }
        int ans[] = new int[st.size()];
         for(int i= st.size()-1; i>=0; i--){
             ans[i] = st.pop();
         }
         return ans;                     
-}
+    }
 }
