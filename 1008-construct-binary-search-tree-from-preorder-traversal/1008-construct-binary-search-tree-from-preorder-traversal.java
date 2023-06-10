@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    public static int indx =0;
+    public  int indx =0;
     public TreeNode constructBST(int l, int r, int [] arr){
         if(indx == arr.length) return null;
         
