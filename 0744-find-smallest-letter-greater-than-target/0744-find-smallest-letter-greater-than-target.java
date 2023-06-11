@@ -16,6 +16,6 @@ class Solution {
                 l = mid + 1;
             }
         }
-        return letters[h];
+        return letters[l];
     }
 }
