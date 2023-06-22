@@ -14,6 +14,7 @@ class Solution {
             sans.add(src);
             bans.add(new ArrayList<>(sans));
             sans.remove(sans.size() - 1);
+            return;
         }
         path[src] = true;
         
@@ -25,6 +26,5 @@ class Solution {
             }
         }
         path[src] = false;
-        
     }
 }
