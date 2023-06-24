@@ -50,7 +50,7 @@ class Solution
         // Your code here
         Arrays.sort(arr, (a,b) -> {return b.profit - a.profit;});
         
-        int days[] = new int[500];
+        int days[] = new int[150];
 		int totalProfit =0;
 		int count =0;
 
