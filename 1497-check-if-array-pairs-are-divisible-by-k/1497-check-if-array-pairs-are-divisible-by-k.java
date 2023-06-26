@@ -22,7 +22,7 @@ class Solution {
                 
             }
             
-            // if(map.get(rem) != map.get(comprem)) return false;
+            // if(map.get(rem) != map.get(comprem)) return false;    portal issue
             int a = map.get(rem);
             int b = map.get(comprem);
             if(a != b) return false;
