@@ -11,7 +11,7 @@ class Solution {
         
         for(int rem : map.keySet()){
             if(rem ==0){
-                if(map.containsKey(0) && map.get(0)%2 !=0) return false;
+                if( map.get(0)%2 !=0) return false;
                continue;
             }
             
