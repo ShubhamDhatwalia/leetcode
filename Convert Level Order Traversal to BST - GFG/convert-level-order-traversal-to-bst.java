@@ -51,27 +51,29 @@ public class Main {
 
 //User function Template for Java
 
+
 class GFG 
 {
+    //Function to construct the BST from its given level order traversal.
     class Pair{
         Node parent;
         int l;
         int r;
         Pair(Node parent, int l, int r){
             this.parent = parent;
-            this.l = l;
-            this.r = r;
+            this.l =l;
+            this.r =r;
         }
+        
     }
-    //Function to construct the BST from its given level order traversal.
     public Node constructBST(int[] arr)
     {
+        //Write your code here 
         Queue<Pair> q = new LinkedList<>();
-        
         Node root = new Node(arr[0]);
         
-        q.add(new Pair(root, Integer.MIN_VALUE, root.data - 1));
-        q.add(new Pair(root, root.data + 1, Integer.MAX_VALUE));
+        q.add(new Pair(root, Integer.MIN_VALUE, root.data-1));
+        q.add(new Pair(root, root.data+1, Integer.MAX_VALUE));
         
         int indx = 1;
         
@@ -82,13 +84,14 @@ class GFG
             
             Node nn = new Node(arr[indx]);
             
-            if(nn.data < curr.parent.data) curr.parent.left = nn;
-            else curr.parent.right = nn;
-            
+            if(nn.data < curr.parent.data){
+                curr.parent.left =nn;
+            }else{
+                curr.parent.right =nn;
+            }
             indx++;
-            
-            q.add(new Pair(nn, curr.l, nn.data - 1));
-            q.add(new Pair(nn, nn.data + 1, curr.r));
+            q.add(new Pair(nn, curr.l, nn.data-1));
+            q.add(new Pair(nn, nn.data+1, curr.r));
         }
         return root;
     }
